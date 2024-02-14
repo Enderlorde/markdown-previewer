@@ -3,6 +3,10 @@ import colors from './src/colors';
 
 export default {
     root: "./src",
+    build: {
+        outDir: '../dist',
+        emptyOutDir: true
+    },
     css: {
         postcss: {
             plugins: [
