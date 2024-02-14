@@ -1,0 +1,7 @@
+$backgroundColor:#1D7874;
+
+body {
+    display:flex;
+    flex-direction:column;
+    background-color:$backgroundColor;
+}

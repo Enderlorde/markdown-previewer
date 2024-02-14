@@ -1,0 +1,79 @@
+.app{
+  width:100%;
+  display:flex;
+  flex-direction:row;
+  justify-content:space-around;
+}  
+
+.toolbox {
+  box-sizing:border-box;
+  padding-left:10px;
+  top:0;
+  width:100%;
+  height:4vh;
+  background-color:$toolboxBackgroundColor;
+  color:white;
+  margin-bottom:10px; 
+}
+  
+.editor{
+  box-sizing:border-box;
+  background-color:$contentBackgroundColor;
+  min-height:80vh;
+  max-height:80vh;
+  max-width:45vw;
+  width:45vw;
+  min-width:10vw;
+  border:1px solid $contentBorderColor;
+}   
+  
+.preview{
+  box-sizing:border-box;
+  padding:20px;
+  background-color:$contentBackgroundColor;
+  height:80vh;
+  width:45vw;
+  overflow-y:scroll;
+  border:1px solid $contentBorderColor;
+  color:#010E00;
+}
+    
+p code{
+  background-color:white;
+}
+    
+pre{
+  background-color:white;         
+}
+
+.credits{
+  font-size:0.8em;
+  text-align:right;
+  margin:0;
+  padding-right:5px;
+  color:gray;
+}
+
+a{
+  color:#616161;
+  text-decoration:none;
+}
+    
+blockquote{
+  display:flex;
+  flex-direction:row;
+  font-style:italic;
+  background-color:#ABD4D1;
+}
+
+blockquote::before{
+  content:'“';
+  color:#71918F;
+  background:linear-gradient(to right,#0C615B 5px,#ABD4D1 5px);
+  font-size:5em;
+}
+    
+img{
+  width:100%;
+  height:auto;
+}

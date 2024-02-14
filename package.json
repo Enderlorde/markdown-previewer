@@ -1,0 +1,25 @@
+{
+  "name": "markdownpreviewer",
+  "version": "1.0.0",
+  "description": "Simple markdown previewer app",
+  "main": "index.js",
+  "author": "Enderlorde",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "vite --open",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "postcss-simple-vars": "^7.0.1",
+    "vite": "^5.0.12"
+  },
+  "dependencies": {
+    "dompurify": "^3.0.8",
+    "highlight.js": "^11.9.0",
+    "marked": "^12.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
