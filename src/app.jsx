@@ -1,27 +1,25 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import hljs from 'highlight.js';
-import DOMPurify from 'dompurify';
-import { marked } from 'marked';
 import classes from './app.module.css';
-
-marked.setOptions({
-  breaks: true,
-  highlight: (code,lang,callback) => {
-    return (hljs.highlightAuto(code).value + "<p class='credits'> highlited by <a href='https://highlightjs.org/'>highlight.js</a></p>")
-  }
-})
+import Preview from './preview';
+import Editor from './editor';
 
 //Default markdown
 const defaultMarkdown = `# Welcome!
 ## This is my markdown previewer demo.
 
-Here some code examples: \`<div>Hello world!</div>\`. 
-\`<p>Some funny text here</p>\`.
+Here some code examples:
+\`\`\`
+<div> Hello world! </div>
+\`\`\`
+
+\`\`\`
+<p> Some funny text here </p>
+\`\`\`
 
 A multiline code:
 \`\`\`
-function example(someStuff){
+function example(someStuff) {
   ...modifying someStuff...
   return (someModifyedStuff)
 }
@@ -73,49 +71,6 @@ class App extends React.Component{
         <Preview markdown={this.state.markdown} />
       </div>
     )
-  }
-}
-
-class Toolbox extends React.Component{
-  constructor(props){
-    super(props)
-  }
-  render(){
-    return (
-      <div className={classes.toolbox}>
-        <p>{this.props.title}</p>
-      </div>
-    )
-  }
-}
-
-//Editor component 
-class Editor extends React.Component{
-  constructor(props){
-    super(props)
-  }
-  render(){
-    return (
-      <div>
-        <Toolbox title="Editor"/>
-        <textarea className={classes.editor} onChange={this.props.handler} value={this.props.markdown}></textarea>
-      </div>
-    )
-  }
-}
-
-//Preview component
-class Preview extends React.Component{
-  constructor(props){
-    super(props)
-  }
-  render(){
-    return (
-      <div> 
-        <Toolbox title="Preview" />
-        <div className={classes.preview} dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(marked.parse(this.props.markdown))}}>
-        </div>
-      </div>)
   }
 }
 

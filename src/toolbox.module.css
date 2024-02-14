@@ -1,0 +1,10 @@
+.toolbox {
+  box-sizing:border-box;
+  padding-left:10px;
+  top:0;
+  width:100%;
+  height:4vh;
+  background-color:$toolboxBackgroundColor;
+  color:white;
+  margin-bottom:10px; 
+}

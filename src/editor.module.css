@@ -1,0 +1,10 @@
+.editor{
+  box-sizing:border-box;
+  background-color:$contentBackgroundColor;
+  min-height:80vh;
+  max-height:80vh;
+  max-width:45vw;
+  width:45vw;
+  min-width:10vw;
+  border:1px solid $contentBorderColor;
+} 
